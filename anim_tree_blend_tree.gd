@@ -25,11 +25,20 @@ func _unhandled_input(event: InputEvent) -> void:
 		print("Using Animation Player? %s"%[_use_anim_player])
 	
 	if event.is_action_pressed("ui_up"):
-		target_path = "4frames"
+		if _use_anim_player:
+			target_path = "method_at_4"
+		else:
+			target_path = "4frames"
 	elif event.is_action_pressed("ui_right"):
-		target_path = "5frames"
+		if _use_anim_player:
+			target_path = "method_at_5"
+		else:
+			target_path = "5frames"
 	elif event.is_action_pressed("ui_down"):
-		target_path = "6frames"
+		if _use_anim_player:
+			target_path = "method_at_6"
+		else:
+			target_path = "6frames"
 	elif event.is_action_pressed("ui_left"):
 		if _use_anim_player:
 			target_path = "method_at_0.25s"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3]
+[gd_scene load_steps=35 format=3 uid="uid://4wlxyxvooems"]
 
 [ext_resource type="Script" path="res://anim_tree_state_machine.gd" id="1_0ah2n"]
 [ext_resource type="Texture2D" uid="uid://ypfqrw6ptvvq" path="res://icon.png" id="1_lt1aj"]
