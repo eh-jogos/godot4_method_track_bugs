@@ -42,7 +42,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		if _use_anim_player:
 			_animator.play(target_path)
 		else:
-			_anim_tree["parameters/Transition/current"] = "4frames"
+			_anim_tree["parameters/Transition/current"] = target_path
 			print("parameters/Transition/current: %s"%[_anim_tree["parameters/Transition/current"]])
 
 
