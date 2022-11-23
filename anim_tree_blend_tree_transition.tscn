@@ -1,6 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://dix2cxtxqyp6h"]
+[gd_scene load_steps=19 format=3 uid="uid://x5p8roiqheiq"]
 
-[ext_resource type="Script" path="res://anim_tree_blend_tree.gd" id="1_4n48k"]
+[ext_resource type="Script" path="res://anim_tree_blend_tree_transition.gd" id="1_4n48k"]
 [ext_resource type="Texture2D" uid="uid://ypfqrw6ptvvq" path="res://icon.png" id="2_745iu"]
 
 [sub_resource type="Animation" id="Animation_01wn7"]
@@ -282,7 +282,7 @@ input_4/name = "0_25seconds"
 input_4/auto_advance = false
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_2jhq3"]
-graph_offset = Vector2(-156.434, 62.0821)
+graph_offset = Vector2(113.188, 186.136)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_eydju")
 nodes/Animation/position = Vector2(480, 160)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_oj62l")
