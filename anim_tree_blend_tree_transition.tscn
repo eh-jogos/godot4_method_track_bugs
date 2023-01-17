@@ -282,7 +282,7 @@ input_4/name = "0_25seconds"
 input_4/auto_advance = false
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_2jhq3"]
-graph_offset = Vector2(113.188, 186.136)
+graph_offset = Vector2(119, 117)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_eydju")
 nodes/Animation/position = Vector2(480, 160)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_oj62l")
@@ -302,7 +302,7 @@ node_connections = [&"output", 0, &"Transition", &"Transition", 0, &"Animation",
 script = ExtResource("1_4n48k")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(510, 515)
+position = Vector2(510, 465)
 texture = ExtResource("2_745iu")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -314,4 +314,6 @@ libraries = {
 tree_root = SubResource("AnimationNodeBlendTree_2jhq3")
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/Transition/current = 0
+parameters/Transition/current_state = "6frames"
+parameters/Transition/transition_request = ""
+parameters/Transition/current_index = 3

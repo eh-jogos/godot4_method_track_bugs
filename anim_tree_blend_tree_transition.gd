@@ -13,7 +13,7 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	var is_valid_path := false
 	var target_path = ""
-	var current_state := 0
+	var current_state: StringName
 	
 	if event.is_action_pressed("ui_cancel"):
 		_use_anim_player = not _use_anim_player
@@ -27,16 +27,16 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	if event.is_action_pressed("ui_up"):
 		target_path = "method_at_4"
-		current_state = 1
+		current_state = &"4frames"
 	elif event.is_action_pressed("ui_right"):
 		target_path = "method_at_5"
-		current_state = 2
+		current_state = &"5frames"
 	elif event.is_action_pressed("ui_down"):
 		target_path = "method_at_6"
-		current_state = 3
+		current_state = &"6frames"
 	elif event.is_action_pressed("ui_left"):
 		target_path = "method_at_0.25s"
-		current_state = 4
+		current_state = &"0_25seconds"
 	
 	
 	if target_path != "":
@@ -44,8 +44,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		if _use_anim_player:
 			_animator.play(target_path)
 		else:
-			_anim_tree["parameters/Transition/current"] = current_state
-			print("parameters/Transition/current: %s"%[_anim_tree["parameters/Transition/current"]])
+			_anim_tree["parameters/Transition/transition_request"] = current_state
+			print("parameters/Transition/current_state: %s"%[_anim_tree["parameters/Transition/current_state"]])
 
 
 func print_i_worked() -> void:
