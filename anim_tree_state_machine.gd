@@ -56,3 +56,15 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func print_i_worked() -> void:
 	print("I WORKED!")
+
+
+func _on_animation_player_animation_changed(old_name: StringName, new_name: StringName) -> void:
+	print("old: %s, new: %s"%[old_name, new_name])
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	print("anim: %s"%[anim_name])
+
+
+func _on_animation_player_animation_started(anim_name: StringName) -> void:
+	print("anim: %s"%[anim_name])

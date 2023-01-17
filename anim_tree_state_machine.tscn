@@ -275,7 +275,6 @@ animation = &"horizontal"
 animation = &"vertical"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3ji48"]
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ha4it"]
 
@@ -333,10 +332,11 @@ graph_offset = Vector2(-131, -29)
 script = ExtResource("1_0ah2n")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(510, 515)
+position = Vector2(510, 465)
 texture = ExtResource("1_lt1aj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
 libraries = {
 "": SubResource("AnimationLibrary_f34yr")
 }
@@ -344,6 +344,9 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_bw4e6")
 anim_player = NodePath("../AnimationPlayer")
-active = true
 parameters/playback = SubResource("AnimationNodeStateMachinePlayback_ho5lf")
 parameters/move_group/playback = SubResource("AnimationNodeStateMachinePlayback_081db")
+
+[connection signal="animation_changed" from="AnimationPlayer" to="." method="_on_animation_player_animation_changed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]
